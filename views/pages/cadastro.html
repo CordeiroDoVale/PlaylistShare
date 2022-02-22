@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Página de cadastro do PlaylistShare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>PlaylistShare</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="header_top">
+                <div class="container header_container">
+                    <div class="header_intro">
+                        <a class="header_logo" href="index.html">
+                            PlaylistShare
+                        </a>
+                        <p class="header_version"> Versão 0.1</p>
+                    </div>
+
+                    <div class="header_menu">
+                        <a class="header_menu_item" href="login.html">
+                            Login
+                        </a>
+                        <a class="header_menu_item" href="conta.html">
+                            Conta
+                        </a>
+                        <a class="header_menu_item" href="favoritos.html">
+                            Favoritos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="w-100 flex-center">
+            <div class="cadastro-box">
+                <h2 class="text-center w-100">Cadastro</h2>
+                <form action="/create_user.php">
+                    <div class="flex-justify-between my-2">
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Nome de usuário:</label>
+                            <input class="text-input w-100 fs-6 my-2" placeholder="ex: nome.sobrenome" />
+                        </div>
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Email:</label>
+                            <input class="text-input w-100 fs-6 my-2" placeholder="email@exemplo.com" />
+                        </div>
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <label class="fs-5">Nome completo:</label>
+                        <input class="text-input w-100 fs-6 my-2" placeholder="Nome Completo" />
+                    </div>
+                    <div class="flex-justify-between my-2">
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Senha:</label>
+                            <input class="text-input w-100 fs-6 my-2" type="password" />
+                        </div>
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Confirmar senha:</label>
+                            <input class="text-input w-100 fs-6 my-2" type="password" />
+                        </div>
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <input class="w-100 primary-btn fs-5" type="button" value="Cadastrar-se">
+                    </div>
+                </form>
+                <div class="flex-justify-around mt-3">
+                    <a href="login.html">Já tenho uma conta</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

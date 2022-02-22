@@ -1,0 +1,31 @@
+<!-- views/partials/navbar.ejs -->
+<header class="header_main">
+    <div class="header_top">
+        <div class="container header_container">
+            <div class="header_intro">
+                <a class="header_logo" href="home">
+                    PlaylistShare
+                </a>
+                <p class="header_version"> Versão 0.2</p>
+            </div>
+
+            <div class="header_menu">
+                <% if(!user) { %>
+                    <a class="header_menu_item" href="login">
+                        Login
+                    </a>
+                <% } else {%>
+                    <a class="header_menu_item" href="cadastroPlaylist">
+                        Playlistar
+                    </a>
+                    <a class="header_menu_item" href="logout">
+                        Sair
+                    </a>
+                <% }%>
+                <a class="header_menu_item" href="conta">
+                    Conta
+                </a>
+            </div>
+        </div>
+    </div>
+</header>

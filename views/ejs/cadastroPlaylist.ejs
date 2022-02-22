@@ -1,0 +1,41 @@
+<body>
+    <div>
+        <main class="main_main w-100 flex-center">
+            <div class="cadastroplaylist-box">
+                <h2 class="text-center w-100">Cadastrar Playlists</h2>
+                <div class="flex-justify-between my-2">
+                    <div class="w-50 px-2">
+                        <label class="fs-5">Aplicativo:</label>
+                        <select name="app" id="app" class="text-input-cadastroplaylist w-100 fs-6 my-2">
+                            <option value="spotify">Spotify</option>
+                            <option value="deezer">Deezer</option>
+                            <option value="appleMusic">Apple Music</option>
+                            <option value="amazonMusic">Amazon Music</option>
+                        </select>
+                    </div>
+                    <div class="w-50 px-2">
+                        <label class="fs-5">Usuário:</label>
+                        <input id="userid" class="text-input-cadastroplaylist w-100 fs-6 my-2" placeholder="id do usuário" />
+                    </div>
+                </div>
+                <div class="w-100 px-2 my-2">
+                    <button class="w-100 primary-btn fs-5" type="button" onClick="listarPlaylists()">Buscar</button>
+                </div>
+                <form action="/v1/cadastrarplaylist" method="POST">
+                    <div class="w-100 px-2 my-2">
+                        <label class="fs-5">Playlists:</label>
+                        <div class="list_block of-auto h-15 grey_border">
+                            <ul id="playlist_list_cd" class="list_block"></ul>     
+                        </div>
+                    </div>
+                    
+                    <div class="w-100 px-2 my-2">
+                        <button class="w-100 primary-btn fs-5" type="submit">Cadastrar</button>
+                    </div>
+                </form>
+                
+            </div>
+        </main>
+    </div>
+    <script src="/js/cadastroPlaylist.js"></script>
+</body>

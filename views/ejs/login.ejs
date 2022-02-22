@@ -1,0 +1,20 @@
+<body>
+    <div>
+        <main class="main_main flex-center">
+            <div class="login-box">
+                <h2 class="text-center w-100">Login</h2>
+                <form action="/v1/login" method="POST">
+                    <label class="fs-5">Usuário:</label>
+                    <input name="username" class="text-input fs-6 w-100 my-2" required/>
+                    <label class="fs-5">Senha:</label>
+                    <input name="password" class="text-input fs-6 w-100 my-2" type="password" required/>
+                    <button class="w-100 my-2 primary-btn fs-5" type="submit">Entrar</button>
+                </form>
+                <div class="flex-justify-around mt-2">
+                    <a class = "whitelink" href="cadastro">Cadastre-se!</a>
+                    <a class = "whitelink" href="recuperacao">Esqueci minha senha</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>

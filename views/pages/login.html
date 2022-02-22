@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Página de login do PlaylistShare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>PlaylistShare</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="header_top">
+                <div class="container header_container">
+                    <div class="header_intro">
+                        <a class="header_logo" href="index.html">
+                            PlaylistShare
+                        </a>
+                        <p class="header_version">Versão 0.1</p>
+                    </div>
+
+                    <div class="header_menu">
+                        <a class="header_menu_item" href="login.html">
+                            Login
+                        </a>
+                        <a class="header_menu_item" href="conta.html">
+                            Conta
+                        </a>
+                        <a class="header_menu_item" href="favoritos.html">
+                            Favoritos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="w-100 flex-center">
+            <div class="login-box">
+                <h2 class="text-center w-100">Entrar</h2>
+                <form action="/login_user.php">
+                    <label class="fs-5">Usuário:</label>
+                    <input class="text-input fs-6 w-100 my-2" />
+                    <label class="fs-5">Senha:</label>
+                    <input class="text-input fs-6 w-100 my-2" type="password" />
+                    <input class="w-100 my-2 primary-btn fs-5" type="button" value="Entrar">
+                </form>
+                <div class="flex-justify-around mt-2">
+                    <a href="cadastro.html">Cadastre-se!</a>
+                    <a href="recuperacao.html">Esqueci minha senha</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

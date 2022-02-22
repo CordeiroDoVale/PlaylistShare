@@ -1,0 +1,86 @@
+<script src="/js/cookies.js"></script>
+
+<script>
+    var cssVariables = document.querySelector(":root");
+
+    function checkcookies() {
+        deleteAllCookiesFromThisPage();
+        let stylesheet = getCookie("stylesheet");
+
+        if (stylesheet === "" || isNaN(stylesheet) || stylesheet === null || stylesheet === undefined) {
+            setCookie("stylesheet", "1", 30);
+            document.getElementById('stylesheet').setAttribute('href', '/css/style.css');
+        } else if (stylesheet === "1") {
+            document.getElementById('stylesheet').setAttribute('href', '/css/style.css');
+        } else {
+            document.getElementById('stylesheet').setAttribute('href', '/css/style2.css');
+        }
+
+        let fontsize = getCookie("fontsize");
+
+        if (fontsize === "" || isNaN(fontsize) || fontsize === null || fontsize === undefined) {
+            setCookie("fontsize", "1", 30);
+            cssVariables.style.setProperty("--font-regular-size", "1" + "px");
+        } else {
+            cssVariables.style.setProperty("--font-regular-size", fontsize + "px");
+        }
+    }
+
+    checkcookies();
+    
+    function expandAccessibility() {
+        if (document.getElementById("accessibility-dropdown").style.top === "0px") {
+            document.getElementById("accessibility-dropdown").style.top = "-47px";
+        } else {
+            document.getElementById("accessibility-dropdown").style.top = "0px";
+        }
+    }
+    
+    function changecss() {
+        let stylesheet = getCookie("stylesheet");
+
+        if (stylesheet === "1") {
+            document.getElementById('stylesheet').setAttribute('href', '/css/style2.css');
+            setCookie("stylesheet", "2", 30);
+        }
+        else {
+            document.getElementById('stylesheet').setAttribute('href', '/css/style.css');
+            setCookie("stylesheet", "1", 30);
+        }
+    }
+    
+    // Funções para aumentar e diminuir a fonte do site
+    function increaseFontSize() {
+        let stringTextSize = getComputedStyle(cssVariables).getPropertyValue("--font-regular-size");
+        let textSize = Number(stringTextSize.substring(0, stringTextSize.indexOf("px")));
+
+        let newTextSize = (textSize + 0.1).toString();
+        
+        cssVariables.style.setProperty("--font-regular-size", newTextSize + "px");
+        setCookie("fontsize", newTextSize, 30);
+    }
+    
+    function decreaseFontSize() {
+        let stringTextSize = getComputedStyle(cssVariables).getPropertyValue("--font-regular-size");
+        let textSize = Number(stringTextSize.substring(0, stringTextSize.indexOf("px")));
+
+        let newTextSize = (textSize - 0.1).toString();
+
+        cssVariables.style.setProperty("--font-regular-size", newTextSize + "px");
+        setCookie("fontsize", newTextSize, 30);
+    }
+</script>
+
+<div id="accessibility-dropdown" class="accessibility-dropdown">
+    <div class="accessibility-menu">
+        <div class="accessibility-buttons">
+            <button class="accessibility-button-changefont" onclick="decreaseFontSize()">A-</button>
+            <button class="accessibility-button-changecontrast" onclick="changecss()"><img src="/assets/images/contrast.png"
+                    alt="Botão para alternar o modo de contraste" width="100%" /></button>
+            <button class="accessibility-button-changefont" onclick="increaseFontSize()">A+</button>
+        </div>
+        <div class="accessibility-button-dropdown" onclick="expandAccessibility()">
+            <img src="/assets/images/Ic_arrow_drop_down.png" alt="" width="50px" class="accessibility-image-arrow" />
+        </div>
+    </div>
+</div>

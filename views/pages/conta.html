@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaylistShare</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body class="wrapper">
+    <main class="wrapper_main">
+        <header class="header_main">
+            <div class="header_top">
+                <div class="container header_container">
+                    <div class="header_intro">
+                        <a class="header_logo" href="index.html">
+                            PlaylistShare
+                        </a>
+                        <p class="header_version"> Versão 0.1</p>
+                    </div>
+
+                    <div class="header_menu">
+                        <a class="header_menu_item" href="login.html">
+                            Login
+                        </a>
+                        <a class="header_menu_item" href="conta.html">
+                            Conta
+                        </a>
+                        <a class="header_menu_item" href="favoritos.html">
+                            Favoritos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="user">
+            <h2>Informações da conta:</h2>
+            <div class="usernameinfo">
+                <h3>Usuário:</h3>
+                <h3 id=username> </h3>
+            </div>
+            <div class="emailinfo">
+                <h3>Email:</h3>
+                <h3 id=useremail> </h3>
+            </div>
+            <div class="dateinfo">
+                <h3>Data de criação:</h3>
+                <h3 id=userdate> </h3>
+            </div>
+            <button type="button" class="account_button">Mudar Senha</button>
+            <button type="button" class="account_button">Deletar Conta</button>
+            <div class="playlistinfo">
+                <h3>Nº de Playlists:</h3>
+                <h3 id=userplaylist>4</h3>
+            </div>
+            <div id = "playlist_list">
+                <div class="playlist_block">
+                    <img class="album_icon" src=albumteste.jpg alt="Album Cover">
+                    <div class=playlist_item>Musicas do Queen</div>
+                    <div class=playlist_item>Tracks: 23</div>
+                    <div class=playlist_item>Time: 1:32:23</div>
+                    <button type="submit" class=delete_btn><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="playlist_block2">
+                    <img class="album_icon" src=albumteste.jpg alt="Album Cover">
+                    <div class=playlist_item>Musicas do Queen</div>
+                    <div class=playlist_item>Tracks: 23</div>
+                    <div class=playlist_item>Time: 1:32:23</div>
+                    <button type="submit" class=delete_btn><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="playlist_block3">
+                    <img class="album_icon" src=albumteste.jpg alt="Album Cover">
+                    <div class=playlist_item>Musicas do Queen</div>
+                    <div class=playlist_item>Tracks: 23</div>
+                    <div class=playlist_item>Time: 1:32:23</div>
+                    <button type="submit" class=delete_btn><i class="fas fa-trash"></i></button>
+                </div>
+                <div class="playlist_block4">
+                    <img class="album_icon" src=albumteste.jpg alt="Album Cover">
+                    <div class=playlist_item>Musicas do Queen</div>
+                    <div class=playlist_item>Tracks: 23</div>
+                    <div class=playlist_item>Time: 1:32:23</div>
+                    <button type="submit" class=delete_btn><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        var field = document.getElementById('username');
+        var usernameexemplo = "MaicolaBr";
+        var username = document.createTextNode(usernameexemplo);
+    
+        field.appendChild(username);
+    
+        field = document.getElementById('useremail');
+        var useremailexemplo = "maicolabrbr2@gmail.com";
+        var useremail = document.createTextNode(useremailexemplo);
+    
+        field.appendChild(useremail);
+    
+        field = document.getElementById('userdate');
+        var userdateexemplo = "15/08/2021";
+        var userdate = document.createTextNode(userdateexemplo);
+    
+        field.appendChild(userdate);
+    </script>
+</body>
+</html>

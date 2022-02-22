@@ -1,0 +1,49 @@
+<body>
+    <div>     
+        <!-- mensagens de erro do formulario-->>
+        <%if(typeof erros == "undefined"){%>
+         <% } else { %>
+            <% erros.forEach(function(erros) { %>
+                <div class = "alert-error"><%= erros.texto %></div>
+            <% }); %>
+        <%}%>
+        
+        <main class="main_main flex-center">
+            <div class="cadastro-box">
+                <h2 class="text-center w-100">Cadastro</h2>
+                <form action="/v1/cadastro" method="POST">
+                    <div class="flex-justify-between my-2">
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Nome de usuário:</label>
+                            <input name="username" class="text-input w-100 fs-6 my-2" placeholder="username" required/>
+                        </div>
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Email:</label>
+                            <input name="email" class="text-input w-100 fs-6 my-2" placeholder="email@exemplo.com" required/>
+                        </div>
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <label class="fs-5">Nome completo:</label>
+                        <input name="nome" class="text-input w-100 fs-6 my-2" placeholder="Nome Completo" required/>
+                    </div>
+                    <div class="flex-justify-between my-2">
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Senha:</label>
+                            <input name="password" class="text-input w-100 fs-6 my-2" type="password" required/>
+                        </div>
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Confirmar senha:</label>
+                            <input name="passwordconfirm" class="text-input w-100 fs-6 my-2" type="password" required/>
+                        </div>
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <button class="w-100 primary-btn fs-5" type="submit">Cadastrar-se</button>
+                    </div>
+                </form>
+                <div class="flex-justify-around mt-3">
+                    <a class = "whitelink" href="login">Já tenho uma conta</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>

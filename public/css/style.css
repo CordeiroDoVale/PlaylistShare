@@ -1,0 +1,794 @@
+/*
+    | CONJUNTO DE VARIÁVEIS COM AS CORES PADRÕES
+*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --color-1: #67917a;
+    --color-2: #170409;
+    --color-3: #b8af03;
+    --color-4: #ccbf82;
+    --color-5: #e33258;
+
+    --main-primary-color: #535353;
+    --main-header-color: #121212;
+    --main-primary-bg-color: #141418d3;
+    --main-secondary-bg-color: #535353;
+    --main-white-text-color: #e9e9e9;
+    --main-black-text-color: #121212;
+    --main-blue-color: #4894f7;
+    --main-playlist-color: #1db954;
+
+    --font-regular-size: 1px;
+}
+
+/*
+    | CONJUNTO DE ESTILOS QUE ALTERAM AS TAGS BÁSICAS
+*/
+
+body {
+    background-color: var(--main-secondary-bg-color);
+    margin: 0px;
+    overflow-x: hidden;
+    font-size: calc(var(--font-regular-size));
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    color: var(--main-white-text-color);
+    font-size: 50em;
+    padding: 10px;
+}
+
+h2 {
+    font-size: 30em;
+    color: var(--main-white-text-color);
+}
+
+h3 {
+    font-size: 20em;
+    color: var(--main-white-text-color);
+}
+
+h4 {
+    font-size: 15em;
+    color: var(--main-white-text-color);
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--main-header-color);
+}
+
+*::-webkit-scrollbar {
+    height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #bdbbbb;
+    border-radius: 10px;
+}
+
+/*
+    | CONJUNTO DE CLASSES DE UTILIDADE
+*/
+
+.h-15 {
+    max-height: 15rem;
+}
+
+.w-100 {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.fs-5 {
+    color: whitesmoke;
+    font-size: 1.25rem;
+}
+
+.fs-6 {
+    font-size: 1rem;
+}
+
+.w-100 {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.w-50 {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.w-40 {
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.w-30 {
+    box-sizing: border-box;
+    width: 30%;
+}
+
+.my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fc-black {
+    color: var(--main-black-text-color);
+}
+
+/*
+    | CONJUNTO DE CLASSES PARA ITENS GERAIS
+*/
+
+.primary-btn {
+    color: var(--main-white-text-color);
+    background-color: var(--main-primary-color);
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+.primary-btn:hover {
+    opacity: 0.60;
+    cursor: pointer;
+}
+
+.of-auto {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+}
+
+.grey_border {
+    border-style: solid;
+    border-width: 4px;
+    border-color: dimgrey;
+}
+
+.list_block {
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: var(--main-secondary-bg-color);
+}
+
+/*
+    | CONJUNTO DE CLASSES DE COMPONENTES GLOBAIS (QUE ESTÃO EM QUASE TODAS AS PÁGINAS, COMO CABEÇALHOS, FUNDOS, ETC.)
+*/
+
+.main_main {
+    margin-top: 120px;
+}
+
+.wrapper {
+    background-color: var(--main-primary-color);
+    white-space: nowrap;
+}
+
+.header_main {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: var(--main-header-color)
+}
+
+.container {
+    width: 100%;
+    margin-left: 10px;
+    padding: 8px;
+}
+
+.header_container {
+    position: relative;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_top {
+    position: relative;
+    z-index: 2;
+    background: var(--main-header-color)
+}
+
+.header_intro {
+    margin-top: 10px;;
+    margin-left: 10px;
+    align-items: center;
+}
+
+.header_logo {
+    font-size: 40em;
+    align-items: center;
+    font-weight: 900;
+    color: var(--main-blue-color);
+}
+
+.header_logo:hover {
+    opacity: 0.5
+}
+
+.header_version {
+    display: inline-flex;
+    margin-left: 20px;
+    color: #b3b3b3;
+    align-items: center;
+    font-size: 15em;
+    
+}
+
+.header_version::before {
+    width: 4px;
+    height: 4px;
+    margin-right: 4px;
+    content: '';
+    border-radius: 60%;
+    background: #b3b3b3;
+}
+
+.header_menu {
+    margin-right:50px;
+    margin-left:50px;
+}
+
+.header_menu_item {
+    font-size: 16em;
+    font-weight: 600;
+    margin: -10px;
+    padding: 10px;
+    color: var(--main-blue-color);
+}
+
+.header_menu_item:not(:first-child) {
+    margin-left: 40px
+}
+
+.header_menu_item:hover {
+    opacity: 0.60
+}
+
+.text-input {
+    background-color: var(--main-white-text-color);
+    border: 0.2rem solid var(--main-primary-color);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+/*
+    | CONJUNTO DE CLASSES DE COMPONENTES ESPECÍFICOS
+*/
+
+.text-input-cadastroplaylist{
+    font-size: 30em;
+    height: 50px;
+    background-color: var(--main-white-text-color);
+    border: 0.2rem solid var(--main-primary-color);
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.intro {
+    background-color: var(--main-primary-bg-color);
+    width: 100%;
+    margin-top: 60px;
+    padding: 1pt;
+    text-align: center;
+    white-space: normal;
+}
+
+.search_bar {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 5px;
+    text-align:center;
+}
+
+.search_text {
+    width: 60%;
+    padding: 15px 15px;
+    border: none;
+    font-weight: 800;
+}
+
+.search_btn {
+    padding: 12px;
+    background: var(--main-blue-color);
+    font-size: 20em;
+    color: white;
+    cursor: pointer;
+}
+
+.search_btn:hover {
+    opacity: 0.60;
+}
+
+.whitelink {
+    font-size: 20em;
+    color: whitesmoke;
+}
+
+#playlist_list {
+    padding: 0px;
+}
+
+.section_playlists {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.album_icon {
+    margin-left: 25px;
+    margin-right: 20px;
+    width: 90px;
+    height: auto;
+    align-self: center;
+}
+
+.playlist_block {
+    display: flex;
+    background-color: var(--main-playlist-color);
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin-top: 50px;
+    width: 100%;
+    box-shadow: 8px 8px 5px ;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.playlist_block:hover {
+    filter: none;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.playlist_item {
+    font-size: 30em;
+    font-weight: 700;
+    margin: 20px;
+    color: #ffffff;
+    align-self: center;
+    text-align: center;
+}
+
+.playlist_item::before {
+    content: '¨';
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    background-color: #eeeeee;
+    position:relative;
+    top:10px;
+    right: 25px;
+}
+
+.user {
+    background-color: var(--main-primary-bg-color);
+    height: 400px;
+    margin-top: 35px;
+    padding: 30pt;
+}
+
+.accinfotop {
+    display:inline-flex;
+}
+
+.accinfo {
+    display:flex;
+}
+
+.datamargin {
+    margin-left: 10px;
+}
+
+.account_button {
+    margin: 20px;
+    padding: 16px;
+    font-size: 25em;
+    color: rgb(255, 255, 255);
+    background-color: var(--main-blue-color);
+}
+
+.account_button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.delete_btn {
+    margin-right: 10px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20em;
+    color: white;
+    cursor: pointer;
+}
+
+.delete_btn:hover {
+    color:black;
+}
+
+.playlist_block2 {
+    display: flex;
+    background-color: #c4ba3a;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin-top: 50px;
+    width: 100%;
+    box-shadow: 8px 8px 5px ;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.playlist_block3 {
+    display: flex;
+    background-color: #d10606;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin-top: 50px;
+    width: 100%;
+    box-shadow: 8px 8px 5px ;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.playlist_block4 {
+    display: flex;
+    background-color: #6606b4;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    margin-top: 50px;
+    width: 100%;
+    box-shadow: 8px 8px 5px ;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.alert-success {
+    z-index: 3;
+    position: relative;
+    top: 80px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #11b669;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fade 10s linear;
+    font-size: 20em;
+}
+
+.alert-success:empty {
+    display: none;
+}
+
+
+.alert-error {
+    z-index: 3;
+    position: relative;
+    top: 80px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #c52d22;
+    text-align: center;
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fade 10s linear;
+    font-size: 20em;
+}
+
+.alert-error:empty {
+    display: none;
+}
+
+.login-box {
+    width: 400px;
+    padding: 2rem;
+    color: var(--main-white-text-color);
+    border-radius: 1rem;
+    background-color: var(--main-primary-bg-color);
+    box-shadow: 0 0 1rem var(--main-primary-color);
+}
+
+.cadastro-box {
+    width: 600px;
+    padding: 2rem;
+    color: var(--main-white-text-color);
+    border-radius: 1rem;
+    background-color: var(--main-primary-bg-color);
+    box-shadow: 0 0 1rem var(--main-primary-color);
+}
+
+.cadastroplaylist-box {
+    width: 1500px;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--main-primary-bg-color);
+
+}
+
+@keyframes fade {
+    100% { opacity: 0 }
+    0% { opacity: 1 }
+}
+
+/* 
+    || Classes do painel de acessibilidade
+*/
+
+.accessibility-dropdown {
+    position: fixed;
+    left: 50%;
+    top: -47px;
+    z-index: 100;
+    transform: translate(-50%, 0);
+    transition: top 0.5s;
+}
+
+.accessibility-menu {
+    position: relative;
+}
+
+.accessibility-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0;
+    padding: 5px;
+}
+
+.accessibility-button-changefont {
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+}
+
+.accessibility-button-changecontrast {
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.accessibility-button-dropdown {
+    position: absolute;
+    left: 50%;
+    top: calc(100% - 2px);
+    transform: translate(-50%, 0);
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 0;
+}
+
+.accessibility-button-dropdown:hover {
+    cursor: pointer;
+}
+
+.accessibility-image-arrow {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    margin: -14px -10px -18px -10px;
+}
+
+/* 
+   -------------------------------
+*/
+
+.modal { /* Classe principial do modal, contem o plano de fundo apenas */
+    display: none; 
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-confirm {
+    background-color: var(--main-header-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--main-primary-color);
+    width: 30%;
+    place-content: center;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+}
+
+.modal-changepassword {
+    background-color: var(--main-header-color);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--main-primary-color);
+    width: 40%;
+    place-content: center;
+    animation-name: animatetop;
+    animation-duration: 0.6s
+}
+
+.center-container {
+    padding: 16px;
+    text-align: center;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+/* 
+    || Casses da página de detalhes da playlist
+*/
+
+.playlist-details-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #222222aa;
+    z-index: 8;
+    opacity: 0;
+    transition: opacity 0.25s;
+    /* animation: fadein 0.25s; */
+}
+
+/* @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+} */
+
+.playlist-details-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 90%;
+    background-color: var(--main-black-text-color);
+    z-index: 9;
+}
+
+.playlist-details-top {
+    background-color: var(--main-secondary-bg-color);
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.playlist-details-image {
+    margin-right: 20px;
+}
+
+.playlist-details-trash {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.playlist-details-trash-button {
+    width: 48px;
+    background-color: var(--main-blue-color);
+}
+
+.playlist-details-trash-button:hover {
+    cursor: pointer;
+}
+
+.playlist-details-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+
+.playlist-details-goto-button {
+    background-color: var(--main-blue-color);
+    font-size: 40em;
+    color: var(--main-white-text-color);
+    padding: 20px;
+}
+
+.playlist-details-goto-button:hover {
+    cursor: pointer;
+}
+
+.playlist-details-goto-link {
+    color: #e9e9e9;
+}
+
+.playlist-details-close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: red;
+    font-weight: bolder;
+    font-size: 30em;
+    background-color: #00000050;
+    border: 1px solid black;
+}
+
+.playlist-details-close-button:hover {
+    cursor: pointer;
+}
+
+#loadOverlay{display: none;}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Página de cadastro do PlaylistShare" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cadastroPlaylist.css">
+    <title>PlaylistShare</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="header_top">
+                <div class="container header_container">
+                    <div class="header_intro">
+                        <a class="header_logo" href="index.html">
+                            PlaylistShare
+                        </a>
+                        <p class="header_version"> Versão 0.1</p>
+                    </div>
+
+                    <div class="header_menu">
+                        <a class="header_menu_item" href="login.html">
+                            Login
+                        </a>
+                        <a class="header_menu_item" href="conta.html">
+                            Conta
+                        </a>
+                        <a class="header_menu_item" href="favoritos.html">
+                            Favoritos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="w-100 flex-center">
+            <div class="cadastro-box">
+                <h2 class="text-center w-100">Cadastrar Playlists</h2>
+                <form action="/create_playlist.php">
+                    <div class="flex-justify-between my-2">
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Aplicativo:</label>
+                            <select name="app" id="app" class="text-input w-100 fs-6 my-2">
+                                <option value="spotify">Spotify</option>
+                                <option value="deezer">Deezer</option>
+                                <option value="appleMusic">Apple Music</option>
+                                <option value="amazonMusic">Amazon Music</option>
+                            </select>
+                        </div>
+                        <div class="w-50 px-2">
+                            <label class="fs-5">Usuário:</label>
+                            <input class="text-input w-100 fs-6 my-2" placeholder="marcolabr" />
+                        </div>
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <input class="w-100 primary-btn fs-5" type="button" value="Buscar" onClick="getPlaylists()">
+                    </div>
+                    <div class="w-100 px-2 my-2">
+                        <label class="fs-5">Playlists:</label>
+                        <div class="list_block of-auto h-15 grey_border">
+                            <ul id="playlist_list_cd" class="list_block"></ul>     
+                        </div>
+                    </div>
+                
+                    <div class="w-100 px-2 my-2">
+                        <input class="w-100 primary-btn fs-5" type="button" value="Playlistar">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script>  
+    
+        function getPlaylists() {
+            for (var i = 0; i < 10; i++) {
+            var block = document.createElement('div');
+            block.classList.add('playlist_block_cd');
+            block.innerHTML = "<img class=\"album_icon_cadastro\" src=albumteste.jpg alt=\"Album Cover\">" 
+            + "<div class=playlist_item>Musicas do Queen</div>"
+            + "<div class=playlist_item>Tracks: 23</div>"
+            + "<div class=playlist_item>Maicolabr</div>"
+            + "<div class=playlist_item>Time: 1:32:23</div>";
+         
+            playlist_list_cd.appendChild(block);
+        }
+        }
+        
+        
+        </script>
+</body>
+
+</html>

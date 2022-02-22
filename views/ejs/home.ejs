@@ -1,0 +1,33 @@
+<body id="body" class="wrapper">
+    <main class="wrapper_main">
+        <div class="intro">
+            <h1>Encontre novas playlists abaixo!</h1>
+        </div>
+
+        <div class="search_bar">
+            <input id="busca-playlist" type="text" class="search_text" placeholder="Procure uma playlist...">
+            <button type="submit" class=search_btn onclick="buscarPlaylist()"><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="section_playlists">
+            <ul id = "playlist_list">
+            </ul>
+        </div>
+    </main>
+
+    <div id="playlist-details-parent"></div>
+    
+    <% if(!user) { %>
+        <script>
+            localStorage.setItem("eAdmin", 0);
+            localStorage.setItem("userId", -1);
+        </script>
+    <% } else {%>
+        <script>
+            localStorage.setItem("eAdmin", "<%=user.eAdmin%>");
+            localStorage.setItem("userId", "<%=user.id%>");
+        </script>
+    <% }%>
+
+    <script src="/js/home.js" defer></script>
+</body>
